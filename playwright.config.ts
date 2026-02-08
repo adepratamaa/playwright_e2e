@@ -7,7 +7,18 @@ const config: PlaywrightTestConfig = {
     ignoreHTTPSErrors: true,
     video: 'on-first-retry',
   },
-  reporter: [['html']],
+  reporter: [
+    ['html'],
+    [
+      'playwright-smart-reporter',
+      {
+        outputFolder: 'my-report',
+        outputFile: 'smart-report.html',
+        historyFile: 'test-history.json',
+        maxHistoryRuns: 10,
+      },
+    ],
+  ],
 };
 
 export default config;
