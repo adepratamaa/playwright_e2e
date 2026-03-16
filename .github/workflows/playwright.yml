@@ -33,7 +33,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.58.2-noble
-      options: --user 1001
 
     steps:
       - name: Checkout repository
@@ -64,6 +63,8 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test --browser ${{ github.event.inputs.browser || 'chromium' }}
+        env:
+          HOME: /root
 
       - name: Upload test results
         if: ${{ !cancelled() }}
