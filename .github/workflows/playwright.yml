@@ -9,7 +9,7 @@ on:
         description: Which browser to test
         required: true
         options:
-          - chromium
+          - chrome
           - firefox
           - webkit
   # trigger: push new changes
@@ -60,7 +60,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test --project ${{ github.event.inputs.browser || 'chromium' }}
+        run: npx playwright test --project ${{ github.event.inputs.browser || 'chrome' }}
 
       - name: Upload test results
         if: ${{ !cancelled() }}
