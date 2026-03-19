@@ -5,7 +5,8 @@
     "pw-list-rp": "playwright test --reporter=list",
     "pw-line-rp": "playwright test --reporter=line",
     "pw-debug": "playwright test --debug",
-    "pw-show-rp": "playwright show-report"
+    "pw-show-rp": "playwright show-report",
+    "pw-smart-rp": "playwright-smart-reporter-serve"
   },
   "devDependencies": {
     "@types/node": "^22.15.2",
