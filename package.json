@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "pw-e2e": "playwright test",
+    "pw-ui": "playwright test --ui",
+    "pw-list-rp": "playwright test --reporter=list",
+    "pw-line-rp": "playwright test --reporter=line",
+    "pw-debug": "playwright test --debug",
+    "pw-show-rp": "playwright show-report"
+  },
   "devDependencies": {
     "@types/node": "^22.15.2",
     "playwright": "^1.52.0",
