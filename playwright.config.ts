@@ -1,6 +1,8 @@
 import { PlaywrightTestConfig } from 'playwright/test';
 
 const config: PlaywrightTestConfig = {
+  fullyParallel: true,
+  workers: process.env.CI ? 2 : 1,
   use: {
     headless: true,
     viewport: { width: 1280, height: 720 },
